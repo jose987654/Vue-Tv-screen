@@ -1,0 +1,61 @@
+body{
+    margin-top: 50px
+}
+
+.all-width{
+    width: 100%;
+}
+.center-txt{
+    text-align: center;
+}
+
+.mgn-btm-10{
+    margin-bottom: 10px;
+}
+
+.hyt-300{
+    height: 300px;
+}
+
+.clr-white{
+    color: white;
+}
+
+.bg-clr-grey{
+    background-color: rgb(129, 124, 124);
+    
+}
+.bg-clr-darkgrey{
+    background-color: rgb(58, 58, 58);
+    height:640px;
+    padding:40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.bg-clr-black{
+    background-color: rgb(0, 0, 0);
+    height:440px;
+    width:800px;
+    padding:40px;
+     margin: auto;
+
+}
+.remote{
+    margin-top: 40px;
+}
+.bg-color-purple{
+    background-color: purple;
+}
+
+.bg-color-powderblue{
+    background-color: powderblue;
+}
+
+.txt-center{
+    text-align: center;
+    vertical-align:middle;
+}
+h2{
+    color:blue;
+    font-size: 40px;
+}

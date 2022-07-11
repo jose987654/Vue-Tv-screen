@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Vue JS</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="row txt-center">
+                <div class="col bg-clr-grey clr-white" style="height:700px;padding-top: 40px;">
+                    <h1>Television Set</h1>
+                    <div class="row bg-clr-black">
+
+                        <div class="col-md-2" style="margin-bottom:100px;"></div>
+
+                        <div v-if="tv" class="col-md-8 " style="padding-left:auto;margin-bottom:10px;">
+                            <div v-if="chn1">
+                                <h1> Channel 1 </h1>
+                                <img src="https://i.gifer.com/HwRt.gif" width="400" height="300" alt="bulb_off">
+                                <h1></h1>
+                            </div>
+                            <div v-else-if="chn2">
+                                <h1> Channel 2</h1>
+                                <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/tenor_1.gif"
+                                    width="400" height="300" alt="bulb_on">
+                            </div>
+                            <div v-else-if="chn3">
+                                <h1> Channel 3</h1>
+                                <img src="https://blog.hubspot.com/hubfs/Smiling%20Leo%20Perfect%20GIF.gif" width="400"
+                                    height="300" alt="bulb_on">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 remote">
+                        <div class="bg-clr-purple ">
+                            <button v-on:click="tvswitch">
+                                <img src="data:image/jpeg;base64,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"
+                                    width="60" height="60" alt=" tv switch">
+                            </button>
+                            <button v-on:click="channel1" style="width:200px;height:60px;">
+                                <h2>Chl 1</h2>
+                            </button>
+                            <button v-on:click="channel2" style="width:200px;height:60px">
+                                <h2>Chl 2</h2>
+                            </button>
+                            <button v-on:click="channel3" style="width:200px;height:60px">
+                                <h2>Chl 3</h2>
+                            </button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/scripts/vue.js"></script>
+    <script src="/scripts/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="/scripts/script.js"></script>
+</body>
+
+</html>
